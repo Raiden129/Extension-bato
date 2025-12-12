@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Bato Image Auto-Fixer",
+  "version": "3.1",
+  "description": "Fixes broken images on Bato.to and all mirror sites automatically.",
+  "permissions": [],
+  "host_permissions": [
+    "*://*.mbdny.org/*",
+    "*://*.mbrtz.org/*",
+    "*://*.mbwbm.org/*",
+    "*://*.mbznp.org/*",
+    "*://*.mbqgu.org/*",
+    "*://*.bato.to/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.bato.to/*",
+        "*://*.ato.to/*", "*://*.dto.to/*", "*://*.fto.to/*", "*://*.hto.to/*", 
+        "*://*.jto.to/*", "*://*.lto.to/*", "*://*.mto.to/*", "*://*.nto.to/*", 
+        "*://*.vto.to/*", "*://*.wto.to/*", "*://*.xto.to/*", "*://*.yto.to/*", 
+        "*://*.vba.to/*", "*://*.wba.to/*", "*://*.xba.to/*", "*://*.yba.to/*", "*://*.zba.to/*",
+        "*://*.bato.ac/*", "*://*.bato.bz/*", "*://*.bato.cc/*", "*://*.bato.cx/*", 
+        "*://*.bato.id/*", "*://*.bato.pw/*", "*://*.bato.sh/*", "*://*.bato.vc/*", 
+        "*://*.bato.day/*", "*://*.bato.red/*", "*://*.bato.run/*",
+        "*://*.batoto.in/*", "*://*.batoto.tv/*", "*://*.batotoo.com/*", 
+        "*://*.batotwo.com/*", "*://*.batpub.com/*", "*://*.batread.com/*", 
+        "*://*.battwo.com/*", "*://*.xbato.com/*", "*://*.xbato.net/*", 
+        "*://*.xbato.org/*", "*://*.zbato.com/*", "*://*.zbato.net/*", "*://*.zbato.org/*",
+        "*://*.comiko.net/*", "*://*.comiko.org/*", 
+        "*://*.mangatoto.com/*", "*://*.mangatoto.net/*", "*://*.mangatoto.org/*", 
+        "*://*.batocomic.com/*", "*://*.batocomic.net/*", "*://*.batocomic.org/*", 
+        "*://*.readtoto.com/*", "*://*.readtoto.net/*", "*://*.readtoto.org/*", 
+        "*://*.kuku.to/*", "*://*.okok.to/*", "*://*.ruru.to/*", "*://*.xdxd.to/*", 
+        "*://*.bato.si/*", "*://*.bato.ing/*"
+      ],
+      "js": ["fixer.js"],
+      "run_at": "document_idle"
+    }
+  ],
+    "browser_specific_settings": {
+    "gecko": {
+      "id": "bato-image-auto-fixer@raidenoq.com",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}
